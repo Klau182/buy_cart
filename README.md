@@ -33,6 +33,21 @@ para la autenticacion
 
 rails g devise user
 
+realizamos la migracion para el modelo de devise
+rails db:migrate
 
+
+rails g migration  addUserToArticles user:references
+
+ahora migramos
+rails db:migrate
+
+creando la relacion entre la tabla article y la tabla usuario, 
+en el modelo de user colocamos
+
+has_many :articles
+
+en el modelo de articulo colocamos
+ belongs_to :user
 
 

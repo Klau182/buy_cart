@@ -121,3 +121,8 @@ la variable "a" esta guardando el ultimo valor ejecutado en consola que es Artic
 3.2.1 :014 > 
 
 aca se probo la relacion de muchos a un usuario
+
+
+agregamos navbar y el cdn en el aplication
+
+

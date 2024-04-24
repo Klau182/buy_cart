@@ -2,9 +2,15 @@
 
 <%= render @article %>
 
-<div>
-  <%= link_to "Edit this article", edit_article_path(@article) %> |
-  <%= link_to "Back to articles", articles_path %>
-
-  <%= button_to "Destroy this article", @article, method: :delete %>
+<div class= "container">
+  <% if current_user == @article.user %>
+    <%= link_to "Editar Articulo", edit_article_path(@article), class: "badge rounded-pill text-bg-primary" %> 
+     <br>
+     <br>
+     <%= button_to "Eliminar Articulo", @article, method: :delete, class: "badge rounded-pill text-bg-primary" %>
+  <% end %>  
+  <br>
+  <br>
+  <%= link_to "Atras", articles_path, class: "badge rounded-pill text-bg-primary" %>
 </div>
+

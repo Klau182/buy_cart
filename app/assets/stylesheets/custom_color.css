@@ -1,7 +1,13 @@
+:root {
+    --color-pink: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(104,9,121,0.6339723389355743) 0%, rgba(0,87,255,0.6899947478991597) 91%);
+}
+
 .navbar.custom-bg-color {
-    
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(104,9,121,0.6339723389355743) 0%, rgba(0,87,255,0.6899947478991597) 91%);
+    background: var(--color-pink);
+}
+
+footer {
+    background: var(--color-pink);
 }
 
 .navbar-brand {
@@ -11,3 +17,10 @@
 #text-navbar {
     color: #f8f8fb;
 }
+
+body {
+    font-family: "Merienda", cursive;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal,
+  }

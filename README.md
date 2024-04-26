@@ -1,4 +1,4 @@
-# README
+# Buy_Cart
 
 - iniciando el proyecto con:
 rails new buy_cart
@@ -124,5 +124,35 @@ aca se probo la relacion de muchos a un usuario
 
 
 agregamos navbar y el cdn en el aplication
+
+https://fonts.google.com/selection/embed (link del tipo de letra de google)
+cambiamos el estilo de letra de la app a Merienda, agregamos los links
+en el head del aplication.htm.erb
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+
+en el archivo con extension css
+
+body {
+    font-family: "Merienda", cursive;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal,
+  }
+
+  modificamos tambien en la vista show para que el usuario logueado
+  solo pueda modificar y eliminar el articulo que el creo; los demas
+  articulos de otros usuarios solo los podra ver pero no modificar ni
+  eliminar
+
+  <% if current_user == @article.user %>
+    <%= link_to "Editar Articulo", edit_article_path(@article), class: "badge rounded-pill text-bg-primary" %> 
+    
+     <%= button_to "Eliminar Articulo", @article, method: :delete, class: "badge rounded-pill text-bg-primary" %>
+  <% end %>  
+
+creacion footer
 
 

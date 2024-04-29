@@ -189,6 +189,38 @@ body {
   <% end %>  
 ```
 
-Ahora creamos la seccion del footer
+## Ahora creamos la seccion del footer
+
+## Agregando gema Faker
+
+en el archivo gemfile agregamos la gema faker
+
+ ```ruby
+ # add gem faker
+ gem "faker"
+```
+
+En el archivo seeds.rb escribimos lo siguiente
+
+ ```ruby
+ 10.times do
+    Article.create(
+        name: Faker::Commerce.product_name,
+        price: rand(2990..10000),
+        user_id: rand(1...3)
+    )
+end
+```
+En este ciclo estamos creando 10 articulos que seran asignados
+entre los 3 usuarios que tenemos en la bd hasta el momento,
+
+name: Faker::Commerce.product_name: la variable name
+guardara desde el modelo Faker del modulo comercio
+nombres de productos.
+
+price: rand(2990..10000), asignamos un precio entre 2990 y 10 mil pesos
+
+user_id: rand(1...3) a cualquiera de los usuarios entre id 1 y 3
+
 
 

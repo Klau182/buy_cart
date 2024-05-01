@@ -229,5 +229,9 @@ price: rand(2990..10000), asignamos un precio entre 2990 y 10 mil pesos
 
 user_id: rand(1...3) a cualquiera de los usuarios entre id 1 y 3
 
+## Controlador home index
 
+sintaxis para crear controlador
+
+rails g controller [name_controller] [name_method]
 

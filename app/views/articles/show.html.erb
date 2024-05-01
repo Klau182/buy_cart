@@ -4,13 +4,13 @@
 
 <div class= "container">
   <% if current_user == @article.user %>
-    <%= link_to "Editar Articulo", edit_article_path(@article), class: "badge rounded-pill text-bg-primary" %> 
+    <%= link_to "Editar Articulo", edit_article_path(@article), id: "btns-main", class: "badge rounded-pill" %> 
      <br>
      <br>
-     <%= button_to "Eliminar Articulo", @article, method: :delete, class: "badge rounded-pill text-bg-primary" %>
+     <%= button_to "Eliminar Articulo", @article, method: :delete, id: "btns-main", class: "badge rounded-pill" %>
   <% end %>  
   <br>
   <br>
-  <%= link_to "Atras", articles_path, class: "badge rounded-pill text-bg-primary" %>
+  <%= link_to "Atras", articles_path, id: "btns-main", class: "badge rounded-pill" %>
 </div>
 
